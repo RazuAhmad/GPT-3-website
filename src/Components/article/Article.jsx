@@ -1,9 +1,17 @@
 import React from "react";
 import "./article.css";
-const Article = () => {
+
+const Article = ({ img, text, date }) => {
   return (
-    <div>
-      <h2>Article</h2>
+    <div className="gpt3__article">
+      <p>
+        <img src={img} alt="img" />
+      </p>
+      <div className="gpt3_article-content">
+        <p>{date}</p>
+        <h3>{text}</h3>
+        <p>Read Full Article</p>
+      </div>
     </div>
   );
 };
